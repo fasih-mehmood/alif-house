@@ -10,7 +10,7 @@
 
 body {
   margin: 0;
-  font-family: 'Inter', Helvetica, Arial, sans-serif;
+  font-family: "Inter", Helvetica, Arial, sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -40,11 +40,11 @@ a:visited {
 }
 
 .font-size-1 {
-  font-size: .75rem !important;
+  font-size: 0.75rem !important;
 }
 
 .font-size-2 {
-  font-size: .875rem !important;
+  font-size: 0.875rem !important;
 }
 
 .font-size-5 {
@@ -59,21 +59,19 @@ a:visited {
   font-weight: 500 !important;
 }
 
-.footer-before-content {
-  form {
-    flex: 0 0 57%;
-    max-width: 57%;
-    display: flex;
-    align-items: flex-start;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: space-between;
-  }
+.footer-before-content form {
+  flex: 0 0 57%;
+  max-width: 57%;
+  display: flex;
+  align-items: flex-start;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
 }
 
 .field-container {
   flex: 1 1 0%;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 .submit-container {
@@ -83,7 +81,7 @@ a:visited {
 
 .field-large {
   height: 3.75rem;
-  padding: .844rem 2rem;
+  padding: 0.844rem 2rem;
   border-color: #161619;
   color: #333;
   font-size: 16px;
@@ -132,20 +130,17 @@ a:visited {
   color: #7c6e65;
 }
 
-@media(min-width: 768px) {
+@media (min-width: 768px) {
   .space-bottom-md-3 {
     padding-bottom: 6rem !important;
   }
 }
-
-@media(min-width: 992px) {
+@media (min-width: 992px) {
   .space-bottom-lg-3 {
     padding-bottom: 6rem !important;
   }
 }
-
-@media(min-width: 1200px) {
-
+@media (min-width: 1200px) {
   .rounded-left-xl-0 {
     border-top-left-radius: 0 !important;
     border-bottom-left-radius: 0 !important;
