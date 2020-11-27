@@ -21,12 +21,12 @@ a:visited {
   text-decoration: none;
 }
 
-.bg-secondary-black-200 {
-  background-color: #e46557 !important;
+.bg-secondary-khaaki-800 {
+  background-color: #b48c52 !important;
 }
 
-.bg-secondary-gray-800 {
-  background-color: #e98074 !important;
+.bg-secondary-khaaki-200 {
+  background-color: #c9ab81 !important;
 }
 
 .btn-wide {
@@ -106,6 +106,11 @@ a:visited {
   border-bottom-right-radius: 0;
 }
 
+.space-1 {
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
+}
+
 .space-top-3 {
   padding-top: 6rem !important;
 }
@@ -118,8 +123,16 @@ a:visited {
   padding-bottom: 6rem !important;
 }
 
+#social-icon-menu li:first-child {
+  padding-left: 0;
+}
+
 .text-lh-sm {
   line-height: 1.2;
+}
+
+.text-black {
+  color: black !important;
 }
 
 .text-secondary-gray-1080 {
