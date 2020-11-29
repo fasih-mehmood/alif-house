@@ -76,6 +76,10 @@ a:visited {
   color: gray;
 }
 
+.carousel-item {
+  transition: 0.75s all ease;
+}
+
 .description p {
   margin-bottom: 0;
 }

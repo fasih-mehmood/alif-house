@@ -83,6 +83,10 @@ a:visited {
   color: rgb(128, 128, 128);
 }
 
+.carousel-item {
+  transition: 0.75s all ease;
+}
+
 .description p {
   margin-bottom: 0;
 }
