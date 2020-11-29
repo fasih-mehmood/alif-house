@@ -54,12 +54,24 @@ a:visited {
   font-size: .875rem !important;
 }
 
+.font-size-3 {
+  font-size: 1.125rem;
+}
+
+.font-size-4 {
+  font-size: 1.25rem;
+}
+
 .font-size-5 {
   font-size: 1.5rem;
 }
 
 .font-size-7 {
   font-size: 1.875rem;
+}
+
+.font-size-10 {
+  font-size: 2.5rem;
 }
 
 .font-weight-medium {
@@ -102,8 +114,71 @@ a:visited {
   height: 50px;
 }
 
+.link-black-50 {
+  transition: padding 0.2s ease-in-out;
+
+  &:link,
+  &:visited {
+    color: rgba(0, 0, 0, 0.705);
+  }
+
+  &:hover,
+  &:active {
+    color: $darkpink;
+    padding-left: 12px;
+  }
+}
+
+.link-black {
+
+  &:link,
+  &:visited {
+    color: black;
+  }
+
+  &:hover,
+  &:active {
+    color: $darkpink;
+  }
+}
+
 .mb-5 {
   margin-bottom: 2rem !important;
+}
+
+.mb-6 {
+  margin-bottom: 2.5rem !important;
+}
+
+.mb-7 {
+  margin-bottom: 3rem !important;
+}
+
+.mb-8 {
+  margin-bottom: 3.5rem !important;
+}
+
+.mb-10 {
+  margin-bottom: 4.5rem !important;
+}
+
+.mt-n10 {
+  margin-top: -4.5rem !important;
+}
+
+.menu-footer-widget {
+  margin-left: 0;
+  font-size: 14px;
+
+  li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+.py-3 {
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
 }
 
 .pb-6 {
@@ -132,8 +207,13 @@ a:visited {
   padding-bottom: 6rem !important;
 }
 
-#social-icon-menu li:first-child {
-  padding-left: 0;
+#social-icon-menu {
+  li:first-child {
+    padding-left: 0;
+  }
+  .btn {
+    padding: 0.75rem 1rem;
+  }
 }
 
 .text-lh-sm {
@@ -153,18 +233,65 @@ a:visited {
 }
 
 @media(min-width: 768px) {
+  
+  .mt-md-n13 {
+    margin-top: -7rem !important;
+  }
+
   .space-bottom-md-3 {
     padding-bottom: 6rem !important;
   }
 }
 
 @media(min-width: 992px) {
+
+  .mb-lg-7 {
+    margin-bottom: 3rem !important;
+  }
+
+  .mb-lg-8 {
+    margin-bottom: 3.5rem !important;
+  }
+
+  .py-lg-7 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+
+  .pt-lg-7 {
+    padding-top: 3rem !important;
+  }
+
   .space-bottom-lg-3 {
     padding-bottom: 6rem !important;
   }
 }
 
 @media(min-width: 1200px) {
+
+  .mb-lg-5 {
+    margin-bottom: 2rem !important;
+  }
+
+  .mb-lg-6 {
+    margin-bottom: 2.5rem !important;
+  }
+
+  .mb-lg-7 {
+    margin-bottom: 3rem !important;
+  }
+
+  .mb-lg-8 {
+    margin-bottom: 3.5rem !important;
+  }
+
+  .pl-xl-10 {
+    padding-left: 4.5rem !important;
+  }
+
+  .pr-xl-4 {
+    padding-right: 1.5rem !important;
+  }
 
   .rounded-left-xl-0 {
     border-top-left-radius: 0 !important;
