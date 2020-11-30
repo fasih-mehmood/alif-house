@@ -14,11 +14,12 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
     integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="css/pre-con.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+  <div class="se-pre-con"></div>
   <header>
     <div class="bg-secondary-cream-200">
       <div class="container pt-3 pb-3 pt-md-4 pb-md-4">
@@ -130,7 +131,46 @@
       </div>
     </nav>
   </header>
-  <main id="main" role="main"></main>
+  <main id="main" role="main">
+    <div class="container">
+      <div class="mx-auto text-center w-75">
+        <h5 class="mt-5 font-size-7 font-weight-medium">Welcome to Alif House</h5>
+        <iframe class="m-auto my-5 w-100 d-block video" src="https://www.youtube.com/embed/I_GnUjBO4as" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+        </iframe>
+      </div>
+    </div>
+    <div class="border-top">
+      <div class="container">
+        <div class="mx-auto mb-5 text-center w-75">
+          <h5 class="mt-5 font-size-7 font-weight-medium">
+            Fun matrix canvas
+          </h5>
+          <canvas id="c" class="d-block w-100"></canvas>
+        </div>
+      </div>
+    </div>
+    <div class="border-top">
+      <div class="container">
+        <div class="mx-auto mb-5 text-center w-75">
+          <h5 class="mt-5 font-size-7 font-weight-medium">
+            Dinos on Books
+          </h5>
+          <p class="text-gray-700">Click on the books to go to the book page.</p>
+          <img class="img-fluid" src="img/dinosOnBooks.jpg" usemap="#image-map">
+          <map name="image-map">
+            <area target="" alt="Dinosaurs" title="Dinosaurs" href="#"
+              coords="127,183,139,172,155,170,167,175,174,188,182,203,190,211,208,212,215,212,227,203,240,193,252,188,270,185,285,187,299,192,308,204,322,222,337,194,345,180,333,172,325,165,338,153,352,153,357,164,357,174,379,181,388,182,399,186,407,196,412,203,423,198,444,195,463,200,478,202,483,213,487,200,490,188,499,173,506,164,516,160,524,155,536,156,542,175,537,194,535,214,559,224,540,232,560,240,563,248,559,254,548,263,534,268,513,258,498,260,499,268,507,278,518,295,505,298,482,297,458,270,430,270,444,292,419,294,398,296,383,282,367,292,352,293,345,297,327,297,330,285,315,275,308,293,276,294,278,271,264,268,259,294,229,294,227,257,189,243,159,215,148,191,132,191"
+              shape="poly">
+            <area target="" alt="Books" title="Books" href="singleproduct.html"
+              coords="199,482,198,449,204,423,202,381,215,370,208,342,199,335,220,316,220,301,535,302,535,320,540,331,519,338,520,379,515,388,519,425,552,435,553,449,528,454,535,472,534,480"
+              shape="poly">
+          </map>
+        </div>
+      </div>
+    </div>
+  </main>
   <footer>
     <div class="border-top">
       <div class="border-bottom space-top-3">
@@ -138,13 +178,14 @@
           <div class="footer-before-content space-bottom-2 space-bottom-md-3">
             <div class="mb-5 text-center">
               <h5 class="font-size-7 font-weight-medium">Join Our Newsletter</h5>
-              <p class="text-gray-700">Signup to be the first to hear about exclusive deals, special offers and upcoming
-                collections</p>
+              <p class="text-gray-700">Signup to be the first to hear about exclusive deals, special offers and upcoming collections</p>
             </div>
             <div>
-              <form action="" method="post" class="flex-md-row d-flex flex-column align-items-center">
+              <form id="subscribeNews" action="" method="post"
+                class="flex-md-row d-flex flex-column align-items-center">
                 <div class="field-container">
-                  <input type="email" required class="field-large" placeholder="Enter email for weekly newsletter.">
+                  <input type="email" id="subEmail" required class="field-large"
+                    placeholder="Enter email for weekly newsletter.">
                 </div>
                 <div class="submit-container position-relative">
                   <button class="py-3 btn btn-dark btn-wide rounded-0 font-weight-medium"
@@ -289,10 +330,14 @@
       </div>
     </div>
   </footer>
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
   </script>
+  <script src="js/sweetalert2@9.min.js"></script>
+  <script src="js/pre-con.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

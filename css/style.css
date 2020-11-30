@@ -252,6 +252,11 @@ a:visited {
   margin-top: -4.5rem !important;
 }
 
+.my-5 {
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
+}
+
 .menu-footer-widget {
   margin-left: 0;
   font-size: 14px;
@@ -304,7 +309,7 @@ a:visited {
 
 .rate:not(:checked) > input {
   position: absolute;
-  top: -9999px;
+  opacity: 0;
 }
 
 .rate:not(:checked) > label {
@@ -418,6 +423,10 @@ a:visited {
   color: #7c6e65;
 }
 
+.video {
+  height: 500px;
+}
+
 @media (max-width: 768px) {
   .font-size-xs-25 {
     font-size: 1.5625rem !important;
@@ -509,4 +518,7 @@ a:visited {
   .space-bottom-xl-3 {
     padding-bottom: 6rem !important;
   }
+}
+#c {
+  max-height: 500px;
 }

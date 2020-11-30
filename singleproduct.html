@@ -14,11 +14,12 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
     integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="css/pre-con.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+  <div class="se-pre-con"></div>
   <header>
     <div class="bg-secondary-cream-200">
       <div class="container pt-3 pb-3 pt-md-4 pb-md-4">
@@ -37,7 +38,7 @@
           </div>
           <div class="pr-5">
             <a href="index.html" class="mb-2 d-block" rel="home" style="width:70px;">
-              <img src="img/logo.png" alt="logo" class="w-100">
+              <img src="img/logo.png" alt="alif house logo" class="w-100">
             </a>
           </div>
           <div class="order-1 mt-2 ml-xl-0 ml-md-auto w-r-100 flex-grow-1 mr-md-5 mt-md-0 order-md-0">
@@ -147,7 +148,7 @@
     <div class="product">
       <div class="container single-product-container">
         <div class="row">
-          <div class="alifhouse-product-gallery col-md-5">
+          <div class="col-md-5">
             <div id="bookCarousel" class="carousel slide" data-ride="carousel">
               <ol class="carousel-indicators">
                 <li data-target="#bookCarousel" data-slide-to="0" class="active"></li>
@@ -237,7 +238,7 @@
             <div class="container tab-content font-size-2">
               <div class="mb-10 row pt-9">
                 <div class="col-xl-8 offset-xl-2">
-                  <div class="alifhouse-tabs-panel--description">
+                  <div>
                     <p class="mb-0">We aim to show you accurate product information. Manufacturers, suppliers and others
                       provide what you see here, and we have not verified it. See our disclaimer</p>
                     <p class="mb-0">#1 New York Times Bestseller</p>
@@ -495,7 +496,7 @@
                       <div id="review_form">
                         <div id="respond" class="comment-respond">
                           <h4 id="reply-title" class="mb-4 font-size-5">Write a Review <small></h4>
-                          <form action="#" method="post" id="commentform" class="comment-form" novalidate="">
+                          <form action="#" method="post" id="commentform" class="comment-form">
                             <p class="font-size-2">
                               <span id="email-notes">Your email address will not be
                                 published.</span> Required fields are marked <span class="required">*</span>
@@ -503,15 +504,15 @@
                             <div class="mb-6 d-flex align-items-center">
                               <label for="rating" class="mb-0 mr-3 h6">Select a rating(required)</label>
                               <div class="rate">
-                                <input type="radio" id="star5" name="rate" value="5" />
+                                <input type="radio" id="star5" name="rate" value="5" required/>
                                 <label for="star5" title="text">5 stars</label>
-                                <input type="radio" id="star4" name="rate" value="4" />
+                                <input type="radio" id="star4" name="rate" value="4" required/>
                                 <label for="star4" title="text">4 stars</label>
-                                <input type="radio" id="star3" name="rate" value="3" />
+                                <input type="radio" id="star3" name="rate" value="3" required/>
                                 <label for="star3" title="text">3 stars</label>
-                                <input type="radio" id="star2" name="rate" value="2" />
+                                <input type="radio" id="star2" name="rate" value="2" required/>
                                 <label for="star2" title="text">2 stars</label>
-                                <input type="radio" id="star1" name="rate" value="1" />
+                                <input type="radio" id="star1" name="rate" value="1" required/>
                                 <label for="star1" title="text">1 star</label>
                               </div>
                             </div>
@@ -565,9 +566,9 @@
                 collections</p>
             </div>
             <div>
-              <form action="" method="post" class="flex-md-row d-flex flex-column align-items-center">
+              <form id="subscribeNews" action="" method="post" class="flex-md-row d-flex flex-column align-items-center">
                 <div class="field-container">
-                  <input type="email" required class="field-large" placeholder="Enter email for weekly newsletter.">
+                  <input type="email" id="subEmail" required class="field-large" placeholder="Enter email for weekly newsletter.">
                 </div>
                 <div class="submit-container position-relative">
                   <button class="py-3 btn btn-dark btn-wide rounded-0 font-weight-medium"
@@ -717,6 +718,9 @@
   <script src=" https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
   </script>
+  <script src="js/sweetalert2@9.min.js"></script>
+  <script src="js/pre-con.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
