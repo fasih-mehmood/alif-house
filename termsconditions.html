@@ -15,17 +15,117 @@
     integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/pre-con.min.css">
+  <link rel="stylesheet" href="css/animate.min.css" />
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <div class="se-pre-con"></div>
+  <div class="hidden sidebar-bg-overlay animate__animated"></div>
+  <aside id="accountBar" class="hidden animate__animated sidebar sidebar-lg right">
+    <div id="login">
+      <header class="p-4 justify-content-between border-bottom d-flex px-md-6">
+        <h2 class="mb-0 font-size-3">
+          <i class="mr-1 fa fa-user-o font-size-5"></i>
+          Account
+        </h2>
+        <a href="javascript:void(0)" class="mb-0 font-size-3 link-gray" onclick="closeNav('accountBar','Right')">
+          Close <span class="font-size-4">&times;</span>
+        </a>
+      </header>
+      <form class="p-4 login p-md-6" method="post">
+        <div class="mb-4 form-group">
+          <div>
+            <label class="form-label" for="username">Username or email <span class="required">*</span></label>
+            <input type="text" class="px-4 form-control rounded-0 height-4" name="username" id="username"
+              autocomplete="username" aria-label="" required="">
+          </div>
+        </div>
+        <div class="mb-4 form-group">
+          <div>
+            <label class="form-label" for="password">Password <span class="required">*</span></label>
+            <input type="password" class="px-4 form-control rounded-0 height-4" name="password" id="password"
+              autocomplete="current-password" aria-label="" required="">
+          </div>
+        </div>
+        <div class="mb-5 d-flex justify-content-between align-items-center">
+          <div class="custom-checkbox custom-control d-flex align-items-center text-muted">
+            <input type="checkbox" class="custom-control-input" id="rememberme" name="rememberme" value="forever">
+            <label class="custom-control-label" for="rememberme">
+              <span class="font-size-2 text-secondary-gray-700">
+                Remember me </span>
+            </label>
+          </div>
+          <a class="text-dark font-size-2 link-muted font-weight-medium" onclick="showForgotPass()"
+            href="javascript:void(0);">
+            Forgot
+            Password? </a>
+        </div>
+        <button type="submit" class="py-3 btn btn-block rounded-0 btn-dark" name="login" value="Sign In">Sign
+          In</button>
+      </form>
+    </div>
+    <div id="forgotPassword" data-target-group="idForm" class="top-0 position-absolute w-100">
+      <header class="px-4 py-4 justify-content-between border-bottom d-flex px-md-6">
+        <h2 class="mb-0 d-flex align-items-center font-size-3">
+          <i class="mr-2 fa fa-question-circle-o font-size-7 "></i>
+          Forgot Password?
+        </h2>
+        <a href="javascript:void(0)" class="mb-0 font-size-3 link-gray" onclick="closeNav('accountBar','Right')">
+          Close <span class="font-size-4">&times;</span>
+        </a>
+      </header>
+      <form method="post" class="p-4 p-md-6">
+        <div class="mb-4 form-group">
+          <div>
+            <label id="user_loginLabel" class="form-label" for="user_login">Username or email <span
+                class="required">*</span></label>
+            <input type="text" class="px-4 form-control rounded-0 height-4" name="user_login" id="user_login"
+              autocomplete="username" aria-label="" aria-describedby="user_loginLabel" required="">
+          </div>
+        </div>
+        <div class="mb-3">
+          <input type="hidden" name="reset_password" value="true">
+          <button type="submit" class="py-3 btn btn-block rounded-0 btn-dark" value="Recover password">Recover
+            Password</button>
+        </div>
+        <div class="mb-4 text-center">
+          <span class="small text-muted">Remember your password?</span>
+          <a class="small link-red" href="javascript:void(0);" onclick="hideForgotPass()">Login </a>
+        </div>
+      </form>
+    </div>
+  </aside>
+  <aside id="sideNav" class="hidden animate__animated sidebar sidebar-md">
+    <header class="p-4 align-items-center justify-content-between border-bottom d-flex px-md-5">
+      <h2 class="mb-0 font-size-3 text-uppercase">Menu</h2>
+      <a href="javascript:void(0)" class="mb-0 font-size-3 link-gray" onclick="closeNav('sideNav','Left')">
+        Close <span class="font-size-4">&times;</span>
+      </a>
+    </header>
+    <ul class="pt-4 main-menu list-unstyled">
+      <li class="has-submenu" onclick="showArtsSubMenu()">
+        <a href="javascript:void(0);" class="text-black d-flex">Arts &amp; Photography<i
+            class="fa fa-angle-right font-weight-medium"></i></a>
+        <ul id="arts-submenu" class="submenu">
+          <li class="mb-3 submenu-header">
+            <a href="javascript:void(0);" onclick="hideSubMenu(this,event)" class="text-black justify-content-start d-flex">
+              <i class="mr-2 fa fa-angle-left font-weight-medium"></i>Arts &amp; Photography</a>
+          </li>
+          <li>
+            <a href="javascript:void(0);" class="text-black d-flex">Architecture<i
+                class="fa fa-angle-right font-weight-medium"></i></a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </aside>
   <header>
     <div class="bg-secondary-cream-200">
       <div class="container pt-3 pb-3 pt-md-4 pb-md-4">
         <div class="flex-wrap d-flex align-items-center position-relative">
           <div class="mr-4">
-            <a href="" class="text-white">
+            <a href="javascript:void(0)" onclick="openNav('sideNav','Left')" class="text-black">
               <svg width="20px" height="18px">
                 <path fill-rule="evenodd" fill="rgb(0, 0, 0)"
                   d="M-0.000,-0.000 L20.000,-0.000 L20.000,2.000 L-0.000,2.000 L-0.000,-0.000 Z"></path>
@@ -66,7 +166,7 @@
             </form>
           </div>
           <div class="d-flex align-items-center">
-            <a href="#">
+            <a href="javascript:void(0)" onclick="openNav('accountBar','Right')">
               <div class="text-black text-lh-sm d-flex align-items-center">
                 <i class="font-size-5 fa fa-user-o"></i>
                 <div class="ml-2 d-none d-lg-block">
@@ -75,15 +175,6 @@
                 </div>
               </div>
             </a>
-            <!-- <a href="#" class="ml-4 d-none d-lg-block">
-              <div class="text-white d-flex align-items-center font-size-2 text-lh-sm">
-                <i class="font-size-5 fa fa-shopping-bag"></i>
-                <div class="ml-2 d-none d-lg-block">
-                  <span class="text-secondary-gray-1080 font-size-1">My Cart</span>
-                  <div>$0.00</div>
-                </div>
-              </div>
-            </a> -->
           </div>
         </div>
       </div>
@@ -118,7 +209,7 @@
           <div class="secondary-navigation">
             <ul class="nav">
               <li>
-                <a href="#" class="px-0 py-3 mx-2 text-white nav-link font-size-2 font-weight-medium"
+                <a href="singleproduct.html" class="px-0 py-3 mx-2 text-white nav-link font-size-2 font-weight-medium"
                   title="Best Seller">Best Seller</a>
               </li>
               <li>
@@ -217,7 +308,7 @@
           <div class="row footer-top-row">
             <div class="mb-6 col-lg-4 mb-lg-0">
               <div class="pb-6">
-                <a href="#" class="mb-5 d-inline-block">
+                <a href="index.html" class="mb-5 d-inline-block">
                   <img src="img/logo.svg" alt="logo" width="170px" height="70px">
                 </a>
                 <address class="mb-5 font-size-2">
@@ -276,7 +367,7 @@
                     <a href="#" class="link-black-50">Wishlist</a>
                   </li>
                   <li>
-                    <a href="#" class="link-black-50">Sign in/Join</a>
+                    <a href="javascript:void(0);" onclick="openNav('accountBar','Right')" class="link-black-50">Sign in/Join</a>
                   </li>
                 </ul>
               </div>
@@ -302,7 +393,7 @@
                 <h4 class="mb-2 font-size-3 font-weight-medium mb-xl-4 pb-xl-1">Policy</h4>
                 <ul class="text-justify menu-footer-widget list-unstyled">
                   <li>
-                    <a href="#" aria-current="page" class="link-black-50">Terms Of Use</a>
+                    <a href="javascript:void(0)" aria-current="page" class="link-black-50">Terms Of Use</a>
                   </li>
                   <li>
                     <a href="#" class="link-black-50">Security</a>
