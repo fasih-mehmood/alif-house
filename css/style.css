@@ -595,6 +595,10 @@ a:visited {
   .font-size-xs-170 {
     font-size: 10.625rem !important;
   }
+
+  .submit-container {
+    margin-left: 0;
+  }
 }
 @media (min-width: 768px) {
   .mt-md-n13 {
