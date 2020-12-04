@@ -587,7 +587,12 @@ a:visited {
   height: 500px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
+  .px-xs-4 {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+
   .font-size-xs-25 {
     font-size: 1.5625rem !important;
   }
@@ -595,14 +600,10 @@ a:visited {
   .font-size-xs-170 {
     font-size: 7.625rem !important;
   }
-
+}
+@media (max-width: 768px) {
   .submit-container {
     margin-left: 0;
-  }
-
-  .px-sm-4 {
-    padding-left: 1.5rem !important;
-    padding-right: 1.5rem !important;
   }
 }
 @media (min-width: 768px) {
