@@ -8,7 +8,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
   <link rel="manifest" href="img/favicons/site.webmanifest">
-  <title>Alif House</title>
+  <title>Homepage - Alif House</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
@@ -110,7 +110,8 @@
             class="fa fa-angle-right font-weight-medium"></i></a>
         <ul id="arts-submenu" class="submenu">
           <li class="mb-3 submenu-header">
-            <a href="javascript:void(0);" onclick="hideSubMenu(this,event)" class="text-black justify-content-start d-flex">
+            <a href="javascript:void(0);" onclick="hideSubMenu(this,event)"
+              class="text-black justify-content-start d-flex">
               <i class="mr-2 fa fa-angle-left font-weight-medium"></i>Arts &amp; Photography</a>
           </li>
           <li>
@@ -237,22 +238,12 @@
       <div class="container">
         <div class="mx-auto mb-5 text-center w-75">
           <h5 class="mt-5 font-size-7 font-weight-medium">
-            Fun matrix canvas
-          </h5>
-          <p class="text-gray-700">Click to fold canvas using custom jQuery button</p>
-          <button id="toggleCanvas" class="mb-4 ui-button ui-widget ui-corner-all">Fold</button>
-          <canvas id="c" class="d-block w-100"></canvas>
-        </div>
-      </div>
-    </div>
-    <div class="border-top">
-      <div class="container">
-        <div class="mx-auto mb-5 text-center w-75">
-          <h5 class="mt-5 font-size-7 font-weight-medium">
             Dinos on Books
           </h5>
-          <p class="text-gray-700">Click on the books to go to the book page.</p>
-          <img class="img-fluid" src="img/dinosOnBooks.jpg" usemap="#image-map">
+          <p class="text-gray-700">Click on the books to go to the book page.<br />Click to fold image using custom
+            jQuery button<br />
+            <button id="toggleImg" class="my-2 ui-button ui-widget ui-corner-all">Fold</button></p>
+          <img id="dinoImg" class="img-fluid" src="img/dinosOnBooks.jpg" usemap="#image-map">
           <map name="image-map">
             <area target="" alt="Dinosaurs" title="Dinosaurs" href="#"
               coords="127,183,139,172,155,170,167,175,174,188,182,203,190,211,208,212,215,212,227,203,240,193,252,188,270,185,285,187,299,192,308,204,322,222,337,194,345,180,333,172,325,165,338,153,352,153,357,164,357,174,379,181,388,182,399,186,407,196,412,203,423,198,444,195,463,200,478,202,483,213,487,200,490,188,499,173,506,164,516,160,524,155,536,156,542,175,537,194,535,214,559,224,540,232,560,240,563,248,559,254,548,263,534,268,513,258,498,260,499,268,507,278,518,295,505,298,482,297,458,270,430,270,444,292,419,294,398,296,383,282,367,292,352,293,345,297,327,297,330,285,315,275,308,293,276,294,278,271,264,268,259,294,229,294,227,257,189,243,159,215,148,191,132,191"
@@ -272,12 +263,15 @@
           <div class="footer-before-content space-bottom-2 space-bottom-md-3">
             <div class="mb-5 text-center">
               <h5 class="font-size-7 font-weight-medium">Join Our Newsletter</h5>
-              <p class="text-gray-700">Signup to be the first to hear about exclusive deals, special offers and upcoming collections</p>
+              <p class="text-gray-700">Signup to be the first to hear about exclusive deals, special offers and upcoming
+                collections</p>
             </div>
             <div>
-              <form id="subscribeNews" action="" method="post" class="flex-md-row d-flex flex-column align-items-center">
+              <form id="subscribeNews" action="" method="post"
+                class="flex-md-row d-flex flex-column align-items-center">
                 <div class="field-container">
-                  <input type="email" id="subEmail" required class="field-large" placeholder="Enter email for weekly newsletter.">
+                  <input type="email" id="subEmail" required class="field-large"
+                    placeholder="Enter email for weekly newsletter.">
                 </div>
                 <div class="submit-container position-relative">
                   <button class="py-3 btn btn-dark btn-wide rounded-0 font-weight-medium"
@@ -348,7 +342,8 @@
                     <a href="#" class="link-black-50">Wishlist</a>
                   </li>
                   <li>
-                    <a href="javascript:void(0);" onclick="openNav('accountBar','Right')" class="link-black-50">Sign in/Join</a>
+                    <a href="javascript:void(0);" onclick="openNav('accountBar','Right')" class="link-black-50">Sign
+                      in/Join</a>
                   </li>
                 </ul>
               </div>

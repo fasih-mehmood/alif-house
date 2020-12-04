@@ -151,8 +151,8 @@ $(document).ready(function () {
   });
 });
 
-$("#toggleCanvas").click(e => {
-  $("#c").toggle("fold", 2000);
+$("#toggleImg").click(e => {
+  $("#dinoImg").toggle("fold", 2000);
 });
 
 /* Drawing matrix on canvas */
@@ -179,7 +179,8 @@ function draw() {
   cxt.fillStyle = "rgba(0,0,0,0.05)";
   cxt.fillRect(0, 0, c.width, c.height);
 
-  cxt.fillStyle = "#0F0";
+  // cxt.fillStyle = "#0F0";
+  cxt.fillStyle = "#bdb492";
   cxt.font = font_size + "px arial";
 
   for (var i = 0; i < drops.length; i++) {
