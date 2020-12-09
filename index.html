@@ -34,12 +34,12 @@
           Close <span class="font-size-4">&times;</span>
         </a>
       </header>
-      <form class="p-4 login p-md-6" method="post">
+      <form id="loginForm" class="p-4 login p-md-6" method="post">
         <div class="mb-4 form-group">
           <div>
-            <label class="form-label" for="username">Username or email <span class="required">*</span></label>
-            <input type="text" class="px-4 form-control rounded-0 height-4" name="username" id="username"
-              autocomplete="username" aria-label="" required="">
+            <label class="form-label" for="email">Email <span class="required">*</span></label>
+            <input type="email" class="px-4 form-control rounded-0 height-4" name="loginEmail" id="loginEmail"
+              autocomplete="loginEmail" aria-label="" required="">
           </div>
         </div>
         <div class="mb-4 form-group">
@@ -76,13 +76,13 @@
           Close <span class="font-size-4">&times;</span>
         </a>
       </header>
-      <form method="post" class="p-4 p-md-6">
+      <form method="post" id="forgotPassForm" class="p-4 p-md-6">
         <div class="mb-4 form-group">
           <div>
-            <label id="user_loginLabel" class="form-label" for="user_login">Username or email <span
+            <label id="user_loginLabel" class="form-label" for="user_loginEmail">Email <span
                 class="required">*</span></label>
-            <input type="text" class="px-4 form-control rounded-0 height-4" name="user_login" id="user_login"
-              autocomplete="username" aria-label="" aria-describedby="user_loginLabel" required="">
+            <input type="email" class="px-4 form-control rounded-0 height-4" name="user_loginEmail" id="user_loginEmail"
+              autocomplete="loginEmail" aria-label="" aria-describedby="user_loginLabel" required="">
           </div>
         </div>
         <div class="mb-3">
@@ -234,7 +234,7 @@
         <h5 class="mt-5 font-size-7 font-weight-medium">Welcome to Alif House</h5>
         <iframe class="m-auto my-5 w-100 d-block video" src="https://www.youtube.com/embed/I_GnUjBO4as" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
+          allowfullscreen>
         </iframe>
       </div>
     </div>

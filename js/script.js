@@ -102,13 +102,64 @@ $(document).ready(function () {
       }
     });
 
+  // Login form
+  loginForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    if (loginForm.checkValidity() == false) {
+      error("Make sure all fields have been filled correctly!");
+      return;
+    }
+    var email = loginEmail.value;
+    var pass = password.value;
+    if (email.length < 10) {
+      error("Please enter a valid email address!");
+      return;
+    } else if (pass.length < 6) {
+      error("Password must be greater than 6 characters!");
+      return;
+    }
+    Swal.fire({
+      icon: "success",
+      title: "Success",
+      confirmButtonColor: "greenyellow",
+      text: "Logged in successfully!",
+    });
+    loginForm.reset();
+  });
+
+  // Forgot password form
+  forgotPassForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    if (forgotPassForm.checkValidity() == false) {
+      error("Make sure all fields have been filled correctly!");
+      return;
+    }
+    var email = user_loginEmail.value;
+    if (email.length < 10) {
+      error("Please enter a valid email address!");
+      return;
+    }
+    Swal.fire({
+      icon: "success",
+      title: "Success",
+      confirmButtonColor: "greenyellow",
+      text: "Password reset instructions have been sent to your email!",
+    });
+    forgotPassForm.reset();
+  });
+
+  // Subscribe Form 
   subscribeNews.addEventListener("submit", (e) => {
     e.preventDefault();
     if (subscribeNews.checkValidity() == false) {
-      error();
+      error("Make sure all fields have been filled correctly!");
       return;
     }
-    var emailSub = subEmail.value;
+    var email = subEmail.value;
+    if (email.length < 10) {
+      error("Please enter a valid email address!");
+      return;
+    }
     Swal.fire({
       icon: "success",
       title: "Success",
@@ -117,14 +168,18 @@ $(document).ready(function () {
     });
     subscribeNews.reset();
   });
-
+  // Comment form
   commentform.addEventListener("submit", (e) => {
     e.preventDefault();
     if (commentform.checkValidity() == false) {
-      error();
+      error("Make sure all fields have been filled correctly!");
       return;
     }
-    var emailRev = commentform["email"].value;
+    var email = commentform["email"].value;
+    if (email.length < 10) {
+      error("Please enter a valid email address!");
+      return;
+    }
     Swal.fire({
       icon: "success",
       title: "Success",
@@ -133,14 +188,18 @@ $(document).ready(function () {
     });
     commentform.reset();
   });
-
+  // Contact form
   contactForm.addEventListener("submit", (e) => {
     e.preventDefault();
     if (contactForm.checkValidity() == false) {
-      error();
+      error("Make sure all fields have been filled correctly!");
       return;
     }
-    var contactEmail = contactForm.email.value;
+    var email = contactForm.email.value;
+    if (email.length < 10) {
+      error("Please enter a valid email address!");
+      return;
+    }
     Swal.fire({
       icon: "success",
       title: "Success",
