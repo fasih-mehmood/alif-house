@@ -80,6 +80,20 @@ a:visited {
   transition: 0.75s all ease;
 }
 
+.carousel-indicators li {
+  width: 7px;
+  height: 7px;
+  border-radius: 100%;
+  background-color: rgba(255, 255, 255, 0.33);
+  border: 2px solid #a49fba;
+}
+.carousel-indicators li:hover {
+  background-color: rgba(255, 255, 255, 0.33) !important;
+}
+.carousel-indicators li:not(.active) {
+  background-color: transparent;
+}
+
 .description p {
   margin-bottom: 0;
 }
