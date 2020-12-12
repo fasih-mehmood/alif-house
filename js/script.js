@@ -48,6 +48,8 @@ function hideSubMenu(el) {
   $(el).parent().parent().removeClass("active");
 }
 
+var letters = /^[A-Za-z]+$/;
+
 $(document).ready(function () {
 
   artsSubMenu = $("#arts-submenu");
@@ -149,65 +151,79 @@ $(document).ready(function () {
   });
 
   // Subscribe Form 
-  subscribeNews.addEventListener("submit", (e) => {
-    e.preventDefault();
-    if (subscribeNews.checkValidity() == false) {
-      error("Make sure all fields have been filled correctly!");
-      return;
-    }
-    var email = subEmail.value;
-    if (email.length < 10) {
-      error("Please enter a valid email address!");
-      return;
-    }
-    Swal.fire({
-      icon: "success",
-      title: "Success",
-      confirmButtonColor: "greenyellow",
-      text: "You have been subscribed successfully!",
+  if ($("#subscribeNews").length) {
+    subscribeNews.addEventListener("submit", (e) => {
+      e.preventDefault();
+      if (subscribeNews.checkValidity() == false) {
+        error("Make sure all fields have been filled correctly!");
+        return;
+      }
+      var email = subEmail.value;
+      if (email.length < 10) {
+        error("Please enter a valid email address!");
+        return;
+      }
+      Swal.fire({
+        icon: "success",
+        title: "Success",
+        confirmButtonColor: "greenyellow",
+        text: "You have been subscribed successfully!",
+      });
+      subscribeNews.reset();
     });
-    subscribeNews.reset();
-  });
-  // Comment form
-  commentform.addEventListener("submit", (e) => {
-    e.preventDefault();
-    if (commentform.checkValidity() == false) {
-      error("Make sure all fields have been filled correctly!");
-      return;
-    }
-    var email = commentform["email"].value;
-    if (email.length < 10) {
-      error("Please enter a valid email address!");
-      return;
-    }
-    Swal.fire({
-      icon: "success",
-      title: "Success",
-      confirmButtonColor: "greenyellow",
-      text: "Your review has been submitted!",
-    });
-    commentform.reset();
-  });
+  }
   // Contact form
-  contactForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-    if (contactForm.checkValidity() == false) {
-      error("Make sure all fields have been filled correctly!");
-      return;
-    }
-    var email = contactForm.email.value;
-    if (email.length < 10) {
-      error("Please enter a valid email address!");
-      return;
-    }
-    Swal.fire({
-      icon: "success",
-      title: "Success",
-      confirmButtonColor: "greenyellow",
-      text: "Your message has been sent successfully!",
+  if ($("#contactForm").length) {
+    contactForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      if (contactForm.checkValidity() == false) {
+        error("Make sure all fields have been filled correctly!");
+        return;
+      }
+      var email = contactForm.email.value;
+      var name = fname.value;
+      if (email.length < 10) {
+        error("Please enter a valid email address!");
+        return;
+      } else if (!name.match(letters)) {
+        error("Name can only have alphabets!");
+        return;
+      }
+      Swal.fire({
+        icon: "success",
+        title: "Success",
+        confirmButtonColor: "greenyellow",
+        text: "Your message has been sent successfully!",
+      });
+      contactForm.reset();
     });
-    contactForm.reset();
-  });
+  }
+  // Comment form
+  if ($("#commentForm").length) {
+    commentForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      if (commentForm.checkValidity() == false) {
+        error("Make sure all fields have been filled correctly!");
+        return;
+      }
+      var reviewEmail = commentForm["email"].value;
+      var reviewName = author.value;
+      if (reviewEmail.length < 10) {
+        error("Please enter a valid email address!");
+        return;
+      } else if (!reviewName.match(letters)) {
+        error("Name can only have alphabets!");
+        return;
+      }
+      Swal.fire({
+        icon: "success",
+        title: "Success",
+        confirmButtonColor: "greenyellow",
+        text: "Your review has been submitted!",
+      });
+      commentForm.reset();
+    });
+  }
 });
 
 $("#toggleImg").click(e => {
@@ -216,41 +232,43 @@ $("#toggleImg").click(e => {
 
 /* Drawing matrix on canvas */
 var c = document.getElementById("c");
-var cxt = c.getContext("2d");
+if (c != null) {
+  var cxt = c.getContext("2d");
 
-c.width = window.innerWidth;
-c.height = window.innerHeight;
+  c.width = window.innerWidth;
+  c.height = window.innerHeight;
 
-var chinese =
-  "田由甲申甴电甶男甸甹町画甼甽甾甿畀畁畂畃畄畅畆畇畈畉畊畋界畍畎畏畐畑";
-chinese = chinese.split("");
+  var chinese =
+    "田由甲申甴电甶男甸甹町画甼甽甾甿畀畁畂畃畄畅畆畇畈畉畊畋界畍畎畏畐畑";
+  chinese = chinese.split("");
 
-var font_size = 10;
-var columns = c.width / font_size;
+  var font_size = 10;
+  var columns = c.width / font_size;
 
-var drops = [];
+  var drops = [];
 
-for (var x = 0; x < columns; x++) {
-  drops[x] = 1;
-}
-
-function draw() {
-  cxt.fillStyle = "rgba(0,0,0,0.05)";
-  cxt.fillRect(0, 0, c.width, c.height);
-
-  // cxt.fillStyle = "#0F0";
-  cxt.fillStyle = "#bdb492";
-  cxt.font = font_size + "px arial";
-
-  for (var i = 0; i < drops.length; i++) {
-    var text = chinese[Math.floor(Math.random() * chinese.length)];
-    cxt.fillText(text, i * font_size, drops[i] * font_size);
-
-    if (drops[i] * font_size > c.height && Math.random() > 0.975)
-      drops[i] = 0;
-
-    //increment y coordinate
-    drops[i]++;
+  for (var x = 0; x < columns; x++) {
+    drops[x] = 1;
   }
+
+  function draw() {
+    cxt.fillStyle = "rgba(0,0,0,0.05)";
+    cxt.fillRect(0, 0, c.width, c.height);
+
+    // cxt.fillStyle = "#0F0";
+    cxt.fillStyle = "#bdb492";
+    cxt.font = font_size + "px arial";
+
+    for (var i = 0; i < drops.length; i++) {
+      var text = chinese[Math.floor(Math.random() * chinese.length)];
+      cxt.fillText(text, i * font_size, drops[i] * font_size);
+
+      if (drops[i] * font_size > c.height && Math.random() > 0.975)
+        drops[i] = 0;
+
+      //increment y coordinate
+      drops[i]++;
+    }
+  }
+  setInterval(draw, 33);
 }
-setInterval(draw, 33);
