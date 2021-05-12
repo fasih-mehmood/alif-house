@@ -484,7 +484,8 @@ a:visited {
 }
 
 .animate__animated {
-  animation-duration: 500ms !important;
+  -webkit-animation-duration: 500ms !important;
+          animation-duration: 500ms !important;
 }
 
 #forgotPassword {

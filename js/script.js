@@ -107,7 +107,7 @@ $(document).ready(function () {
   // Login form
   loginForm.addEventListener("submit", (e) => {
     e.preventDefault();
-    if (loginForm.checkValidity() == false) {
+    if (!loginForm.checkValidity()) {
       error("Make sure all fields have been filled correctly!");
       return;
     }
@@ -132,7 +132,7 @@ $(document).ready(function () {
   // Forgot password form
   forgotPassForm.addEventListener("submit", (e) => {
     e.preventDefault();
-    if (forgotPassForm.checkValidity() == false) {
+    if (!forgotPassForm.checkValidity()) {
       error("Make sure all fields have been filled correctly!");
       return;
     }
@@ -154,7 +154,7 @@ $(document).ready(function () {
   if ($("#subscribeNews").length) {
     subscribeNews.addEventListener("submit", (e) => {
       e.preventDefault();
-      if (subscribeNews.checkValidity() == false) {
+      if (!subscribeNews.checkValidity()) {
         error("Make sure all fields have been filled correctly!");
         return;
       }
@@ -176,7 +176,7 @@ $(document).ready(function () {
   if ($("#contactForm").length) {
     contactForm.addEventListener("submit", (e) => {
       e.preventDefault();
-      if (contactForm.checkValidity() == false) {
+      if (!contactForm.checkValidity()) {
         error("Make sure all fields have been filled correctly!");
         return;
       }
@@ -202,7 +202,7 @@ $(document).ready(function () {
   if ($("#commentForm").length) {
     commentForm.addEventListener("submit", (e) => {
       e.preventDefault();
-      if (commentForm.checkValidity() == false) {
+      if (!commentForm.checkValidity()) {
         error("Make sure all fields have been filled correctly!");
         return;
       }
